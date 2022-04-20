@@ -246,12 +246,12 @@ local function createLabel(option, parent)
 	})
 	option.Text = option.text
 end
-Other = library:Create("ScreenGui", {
+local Other = library:Create("ScreenGui", {
 	Name = "Other"
 	Parent = game.CoreGui
 	ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 })
-local function library:CreateKeybindList()
+do
 	Keybind = library:Create("Frame", {
 		Name = "Keybind",
 		Parent = Other,
@@ -308,7 +308,6 @@ local function library:CreateKeybindList()
 		VerticalAlignment = Enum.VerticalAlignment.Center
 	})
 end
-library:CreateKeybindList()
 local function KeybindAddToggle(v)
 	TextLabel = library:Create("TextLabel", {
 		Parent = Other.Keybind.Properties,
