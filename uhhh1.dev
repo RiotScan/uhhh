@@ -3141,7 +3141,7 @@ local MenuStroke = Instance.new("UIStroke")
 
 				elseif type == "lmao" then  
 					Section.Size = Section.Size + UDim2.new(0,0,0,39)  
-					Element.value = {Scroll = {}, Dropdown = ""}  
+					Element.value = {Dropdown = data.options[1]}  
 
 					local Dropdown = Instance.new("Frame")  
 					local Button = Instance.new("TextButton")  
