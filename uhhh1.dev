@@ -40,14 +40,9 @@ local TBLFIND = table.find
 local TBLREMOVE = table.remove 
 local TBLSORT = table.sort 
 
-local loopkillplr = {}
-for _,v in next, game.Players:GetPlayers() do 
-	table.insert(loopkillplr, v.Name)
-end
+
 
 -- leak = gay	
-
-workspace.InterpolationThrottling = Enum.InterpolationThrottlingMode.Disabled
 
 function rgbtotbl(rgb) 
 	return {R = rgb.R, G = rgb.G, B = rgb.B} 
@@ -206,13 +201,13 @@ local MenuStroke = Instance.new("UIStroke")
 
 		TextLabel.Parent = KeybindList  
 		TextLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 39)  
-		TextLabel.BorderColor3 = Color3.fromRGB(51, 255, 126)  
+		TextLabel.BorderColor3 = Color3.fromRGB(MainUIColor)  
 		TextLabel.Position = UDim2.new(0, 1, 0.300000012, 0)  
 		TextLabel.Size = UDim2.new(0, 155, 0, 24)  
 		TextLabel.ZIndex = 2  
 		TextLabel.Font = Enum.Font.Ubuntu
 		TextLabel.Text = "keybinds"  
-		TextLabel.TextColor3 = Color3.fromRGB(51, 255, 126)  
+		TextLabel.TextColor3 = Color3.fromRGB(MainUIColor)  
 		TextLabel.TextSize = 14.000  
 
 		Frame.Parent = TextLabel  
@@ -232,7 +227,7 @@ local MenuStroke = Instance.new("UIStroke")
 		if not KeybindList.TextLabel.Frame:FindFirstChild(text) then  
 			local TextLabel = Instance.new("TextLabel")  
 			TextLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 39)  
-			TextLabel.BorderColor3 = Color3.fromRGB(51, 255, 126)  
+			TextLabel.BorderColor3 = Color3.fromRGB(MainUIColor)  
 			TextLabel.BorderSizePixel = 0  
 			TextLabel.Size = UDim2.new(0, 155, 0, 24)  
 			TextLabel.ZIndex = 2  
@@ -367,7 +362,7 @@ local MenuStroke = Instance.new("UIStroke")
 		local Frame = Instance.new("Frame")
 		Frame.Parent = TextButton
 		Frame.BackgroundTransparency = 1
-		Frame.BackgroundColor3 = Color3.fromRGB(51, 255, 126)
+		Frame.BackgroundColor3 = Color3.fromRGB(MainUIColor)
 		Frame.Position = UDim2.new(0, 0, 0, 28)
 		Frame.Size = UDim2.new(0, 80, 0, 1)
 
@@ -624,7 +619,7 @@ local MenuStroke = Instance.new("UIStroke")
 						Drop.MidImage = "http://www.roblox.com/asset/?id=6724808282"  
 						Drop.AutomaticCanvasSize = "Y"  
 						Drop.ZIndex = 5  
-						Drop.ScrollBarImageColor3 = Color3.fromRGB(51, 255, 126)  
+						Drop.ScrollBarImageColor3 = Color3.fromRGB(MainUIColor)  
 
 						UIListLayout.Parent = Drop  
 						UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center  
@@ -716,7 +711,7 @@ local MenuStroke = Instance.new("UIStroke")
 										library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(255, 255, 255)})  
 									else  
 										INSERT(Element.value.Jumbobox, v)  
-										library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(51, 255, 126)})  
+										library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(MainUIColor)})  
 									end  
 									updatetext()  
 
@@ -847,7 +842,7 @@ local MenuStroke = Instance.new("UIStroke")
 
 						local function update()  
 							if Element.value.Toggle then  
-								tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(51, 255, 126)})  
+								tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(MainUIColor)})  
 								library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(255, 255, 255)})  
 							else  
 								keybindremove(text)  
@@ -935,7 +930,7 @@ local MenuStroke = Instance.new("UIStroke")
 						Drop.TopImage = "http://www.roblox.com/asset/?id=6724808282"  
 						Drop.AutomaticCanvasSize = "Y"  
 						Drop.ZIndex = 5  
-						Drop.ScrollBarImageColor3 = Color3.fromRGB(51, 255, 126)  
+						Drop.ScrollBarImageColor3 = Color3.fromRGB(MainUIColor)  
 
 						UIListLayout.Parent = Drop  
 						UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center  
@@ -1100,7 +1095,7 @@ local MenuStroke = Instance.new("UIStroke")
 						Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)  
 						Frame.BorderSizePixel = 0  
 						Frame.Size = UDim2.new(0.5, 0, 1, 0)  
-						UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(51, 255, 126)), ColorSequenceKeypoint.new(1, Color3.fromRGB(31, 155, 96))}  
+						UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(MainUIColor)), ColorSequenceKeypoint.new(1, Color3.fromRGB(31, 155, 96))}  
 						UIGradient.Rotation = 90  
 						UIGradient.Parent = Frame  
 
@@ -1343,7 +1338,7 @@ local MenuStroke = Instance.new("UIStroke")
 					Drop.MidImage = "http://www.roblox.com/asset/?id=6724808282"  
 					Drop.AutomaticCanvasSize = "Y"  
 					Drop.ZIndex = 5  
-					Drop.ScrollBarImageColor3 = Color3.fromRGB(51, 255, 126)  
+					Drop.ScrollBarImageColor3 = Color3.fromRGB(MainUIColor)  
 
 					UIListLayout.Parent = Drop  
 					UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center  
@@ -1445,7 +1440,7 @@ local MenuStroke = Instance.new("UIStroke")
 							Frame.ScrollBarThickness = 4  
 							Frame.TopImage = "http://www.roblox.com/asset/?id=6724808282"  
 							Frame.AutomaticCanvasSize = "Y"  
-							Frame.ScrollBarImageColor3 = Color3.fromRGB(51, 255, 126)  
+							Frame.ScrollBarImageColor3 = Color3.fromRGB(MainUIColor)  
 
 							UIListLayout.Parent = Frame  
 							UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center  
@@ -1481,7 +1476,7 @@ local MenuStroke = Instance.new("UIStroke")
 								TextLabel.TextXAlignment = Enum.TextXAlignment.Left  
 								if joll then  
 									joll = false  
-									TextLabel.TextColor3 = Color3.fromRGB(51, 255, 126)  
+									TextLabel.TextColor3 = Color3.fromRGB(MainUIColor)  
 								end  
 
 								Button.MouseButton1Down:Connect(function()  
@@ -1576,7 +1571,7 @@ local MenuStroke = Instance.new("UIStroke")
 									if bad:IsA("TextButton") then  
 										bad.TextLabel.TextColor3 = Color3.fromRGB(200, 200, 200)  
 										if bad.Name == Element.value.Scroll[v.Name] then  
-											bad.TextLabel.TextColor3 = Color3.fromRGB(51, 255, 126)  
+											bad.TextLabel.TextColor3 = Color3.fromRGB(MainUIColor)  
 										end  
 									end  
 								end  
@@ -1625,7 +1620,7 @@ local MenuStroke = Instance.new("UIStroke")
 					Frame.ScrollBarThickness = 4  
 					Frame.TopImage = "http://www.roblox.com/asset/?id=6724808282"  
 					Frame.AutomaticCanvasSize = "Y"  
-					Frame.ScrollBarImageColor3 = Color3.fromRGB(51, 255, 126)  
+					Frame.ScrollBarImageColor3 = Color3.fromRGB(MainUIColor)  
 
 					UIListLayout.Parent = Frame  
 					UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center  
@@ -1660,7 +1655,7 @@ local MenuStroke = Instance.new("UIStroke")
 						TextLabel.TextSize = 14.000  
 						TextLabel.TextXAlignment = Enum.TextXAlignment.Left  
 						if first then first = false  
-							TextLabel.TextColor3 = Color3.fromRGB(51, 255, 126)  
+							TextLabel.TextColor3 = Color3.fromRGB(MainUIColor)  
 						end  
 
 						Button.MouseButton1Down:Connect(function()  
@@ -1770,7 +1765,7 @@ local MenuStroke = Instance.new("UIStroke")
 						Drop.CanvasSize = Drop.CanvasSize + UDim2.new(0, 0, 0, 17)  
 					end  
 					Drop.ZIndex = 5  
-					Drop.ScrollBarImageColor3 = Color3.fromRGB(51, 255, 126)  
+					Drop.ScrollBarImageColor3 = Color3.fromRGB(MainUIColor)  
 
 					UIListLayout.Parent = Drop  
 					UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center  
@@ -1863,7 +1858,7 @@ local MenuStroke = Instance.new("UIStroke")
 									library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(255, 255, 255)})  
 								else  
 									INSERT(Element.value.Jumbobox, v)  
-									library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(51, 255, 126)})  
+									library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(MainUIColor)})  
 								end  
 								updatetext()  
 
@@ -1889,7 +1884,7 @@ local MenuStroke = Instance.new("UIStroke")
 						for i,v in next, Drop:GetChildren() do  
 							if v.Name ~= "UIListLayout" then  
 								if TBLFIND(val.Jumbobox, v.Name) then  
-									v.TextLabel.TextColor3 = Color3.fromRGB(51, 255, 126)  
+									v.TextLabel.TextColor3 = Color3.fromRGB(MainUIColor)  
 								else  
 									v.TextLabel.TextColor3 = Color3.fromRGB(200, 200, 200)  
 								end  
@@ -1995,7 +1990,7 @@ local MenuStroke = Instance.new("UIStroke")
 
 					local function update()  
 						if Element.value.Toggle then  
-							tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(51, 255, 126)})  
+							tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(MainUIColor)})  
 							library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(255, 255, 255)})  
 						else  
 							keybindremove(text)  
@@ -2306,7 +2301,7 @@ local MenuStroke = Instance.new("UIStroke")
 
 					local function update()  
 						if Element.value.Toggle then  
-							tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(51, 255, 126)})  
+							tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(MainUIColor)})  
 							library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(255, 255, 255)})  
 						else  
 							tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(15, 15, 15)})  
@@ -2376,7 +2371,7 @@ local MenuStroke = Instance.new("UIStroke")
 
 					local function update()  
 						if Element.value.Toggle then  
-							tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(51, 255, 126)})  
+							tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(MainUIColor)})  
 							library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(255, 255, 255)})  
 						else  
 							tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(15, 15, 15)})  
@@ -2637,7 +2632,7 @@ local MenuStroke = Instance.new("UIStroke")
 
 					local function update()  
 						if Element.value.Toggle then  
-							tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(155, 155, 155)})  
+							tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(MainUIColor)})  
 							library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(255, 255, 255)})  
 						else  
 							tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(15, 15, 15)})  
@@ -2893,7 +2888,7 @@ local MenuStroke = Instance.new("UIStroke")
 					end)  
 					if data.default then  
 						if Element.value.Toggle then  
-							tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(155, 155, 155)})  
+							tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(MainUIColor)})  
 							library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(255, 255, 255)})  
 						else  
 							tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(15, 15, 15)})  
@@ -3020,7 +3015,7 @@ local MenuStroke = Instance.new("UIStroke")
 					Drop.MidImage = "http://www.roblox.com/asset/?id=6724808282"  
 					Drop.AutomaticCanvasSize = "Y"  
 					Drop.ZIndex = 5  
-					Drop.ScrollBarImageColor3 = Color3.fromRGB(51, 255, 126)  
+					Drop.ScrollBarImageColor3 = Color3.fromRGB(MainUIColor)  
 
 					UIListLayout.Parent = Drop  
 					UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center  
@@ -3201,7 +3196,7 @@ local MenuStroke = Instance.new("UIStroke")
 					Drop.MidImage = "http://www.roblox.com/asset/?id=6724808282"  
 					Drop.AutomaticCanvasSize = "Y"  
 					Drop.ZIndex = 5  
-					Drop.ScrollBarImageColor3 = Color3.fromRGB(51, 255, 126)  
+					Drop.ScrollBarImageColor3 = Color3.fromRGB(MainUIColor)  
 
 					UIListLayout.Parent = Drop  
 					UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center  
@@ -3551,7 +3546,7 @@ ConfigUpdateCfgList:Fire()
 					Frame.BorderSizePixel = 0  
 					Frame.Size = UDim2.new(0.5, 0, 1, 0)  
 
-					UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(51, 255, 126)), ColorSequenceKeypoint.new(1, Color3.fromRGB(31, 155, 96))}  
+					UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(MainUIColor)), ColorSequenceKeypoint.new(1, Color3.fromRGB(31, 155, 96))}  
 					UIGradient.Rotation = 90  
 					UIGradient.Parent = Frame  
 
@@ -3660,7 +3655,7 @@ ConfigUpdateCfgList:Fire()
 					end  
 
 					Button_2.MouseButton1Down:Connect(function()  
-						TextLabel.TextColor3 = Color3.fromRGB(51, 255, 126)  
+						TextLabel.TextColor3 = Color3.fromRGB(MainUIColor)  
 						library:Tween(TextLabel, TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(200, 200, 200)})  
 						callback()  
 					end)  
