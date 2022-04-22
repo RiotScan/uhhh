@@ -247,8 +247,8 @@ local function createLabel(option, parent)
 	option.Text = option.text
 end
 local Other = library:Create("ScreenGui", {
-	Name = "Other"
-	Parent = game.CoreGui
+	Name = "Other",
+	Parent = game.CoreGui,
 	ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 })
 do
@@ -269,42 +269,42 @@ do
 		Size = UDim2.new(1, 0, 0, 21),
 	})
 	Title = library:Create("TextLabel", {
-		Name = "Title"
-		Parent = KeybindText
-		BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		BackgroundTransparency = 1.000
-		Position = UDim2.new(0, 0, 0, 1)
-		Size = UDim2.new(1, 0, 1, -1)
-		Font = Enum.Font.Code
-		Text = "Keybind"
-		TextColor3 = Color3.fromRGB(255, 255, 255)
+		Name = "Title",
+		Parent = KeybindText,
+		BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+		BackgroundTransparency = 1.000,
+		Position = UDim2.new(0, 0, 0, 1),
+		Size = UDim2.new(1, 0, 1, -1),
+		Font = Enum.Font.Code,
+		Text = "Keybind",
+		TextColor3 = Color3.fromRGB(255, 255, 255),
 		TextSize = 14.000
 	})
 	ColorAccent = library:Create("Frame", {
-		Name = "ColorAccent"
-		Parent = KeybindText
+		Name = "ColorAccent",
+		Parent = KeybindText,
 		BackgroundColor3 = library.flags["Menu Accent Color"],
-		BorderSizePixel = 0
+		BorderSizePixel = 0,
 		Size = UDim2.new(1, 0, 0, 1)
 	})
 	ColorAccent = library:Create("UIGradient", {
-		Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(180, 180, 180)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(253, 253, 253))}
-		Rotation = -90
+		Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(180, 180, 180)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(253, 253, 253))},
+		Rotation = -90,
 		Parent = KeybindText
 	})
 	Properties = library:Create("Frame", {
-		Name = "Properties"
-		Parent = Keybind
-		BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-		BorderColor3 = Color3.fromRGB(0, 0, 0)
-		BorderSizePixel = 0
-		Position = UDim2.new(0, 0, 0, 21)
+		Name = "Properties",
+		Parent = Keybind,
+		BackgroundColor3 = Color3.fromRGB(35, 35, 35),
+		BorderColor3 = Color3.fromRGB(0, 0, 0),
+		BorderSizePixel = 0,
+		Position = UDim2.new(0, 0, 0, 21),
 		Size = UDim2.new(1, 0, 0, 0)
 	})
 	UIListLayout = library:Create("UIListLayout", {
-		Parent = Properties
-		HorizontalAlignment = Enum.HorizontalAlignment.Right
-		SortOrder = Enum.SortOrder.LayoutOrder
+		Parent = Properties,
+		HorizontalAlignment = Enum.HorizontalAlignment.Right,
+		SortOrder = Enum.SortOrder.LayoutOrder,
 		VerticalAlignment = Enum.VerticalAlignment.Center
 	})
 end
@@ -341,7 +341,7 @@ local function KeybindRemove(v)
 		Other.Keybind.Properties:FindFirstChild(v):Destroy()
 	end
 end
-local function library:SetKeybindVisible(v)
+function library:SetKeybindVisible(v)
 	Other.Keybind.Visible = v
 end
 local function createDivider(option, parent)
@@ -2678,5 +2678,4 @@ function library:Init()
 		end)
 	end
 end
-
 return library
