@@ -305,7 +305,6 @@ do
 		Parent = Properties,
 		HorizontalAlignment = Enum.HorizontalAlignment.Right,
 		SortOrder = Enum.SortOrder.LayoutOrder,
-		VerticalAlignment = Enum.VerticalAlignment.Center
 	})
 end
 local function KeybindAddToggle(v)
