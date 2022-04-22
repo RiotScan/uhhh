@@ -1170,13 +1170,13 @@ local MenuStroke = Instance.new("UIStroke")
 							end)  
 						end)  
 					end  
-					ConfigLoad:Connect(function(cfg)  
+						ConfigLoad:Connect(function(cfg)  
 						local fix = library:ConfigFix(cfg)  
 						if fix[tabname][sectorname][tabtext][text] ~= nil then  
 							Element:SetValue(fix[tabname][sectorname][tabtext][text])  
 						end  
 					end)  
-													ConfigLoad1:Connect(function(cfg) 
+									ConfigLoad1:Connect(function(cfg) 
 									local fix = library:ConfigFix1(cfg) 
 									if fix[tabname][sectorname][tabtext][text] ~= nil then 
 										Element:SetValue(fix[tabname][sectorname][tabtext][text]) 
@@ -3141,7 +3141,7 @@ local MenuStroke = Instance.new("UIStroke")
 
 				elseif type == "lmao" then  
 					Section.Size = Section.Size + UDim2.new(0,0,0,39)  
-					Element.value = {Dropdown = data.options[1]}  
+					Element.value = {Dropdown = data.options[1]}
 
 					local Dropdown = Instance.new("Frame")  
 					local Button = Instance.new("TextButton")  
@@ -3214,7 +3214,7 @@ local MenuStroke = Instance.new("UIStroke")
 						Drop.Size = UDim2.new(1, 0, 0, 17*num)  
 					end  
 					local first = true  
-function gay()
+					function gay()
 					for i,v in next, data.options do  
 						do  
 							local Button = Instance.new("TextButton")  
@@ -3679,14 +3679,14 @@ ConfigUpdateCfgList:Fire()
 						end  
 					end)  
 				end) 
-								ConfigLoad1:Connect(function(cfg) 
+					ConfigLoad1:Connect(function(cfg) 
 					pcall(function()  
 						local fix = library:ConfigFix1(cfg)  
 						if fix[tabname][sectorname][text] ~= nil then  
 							Element:SetValue(fix[tabname][sectorname][text])  
 						end  
 					end)  
-								end)				
+				end)				
 
 				return Element  
 			end  
